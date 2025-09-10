@@ -1,0 +1,19 @@
+{% extends "APP/base.html" %}
+
+{% block content %}
+    <h2>Child Template Content</h2>
+    Username = {{ Username }} <br>
+    Password = {{ password }} <br>
+    OTP = {{ otp }} <br>
+
+    <h3>List:</h3>
+    {{ mylist }}
+    <ul>
+        {% for i in mylist %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+    Third item = {{ mylist.2 }}
+{% endblock %}
